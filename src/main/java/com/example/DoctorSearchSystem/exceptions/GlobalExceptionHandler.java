@@ -71,6 +71,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         MyErrorResponse errorResponse=new MyErrorResponse(HttpStatus.NOT_FOUND,e.getMessage(),e.getMessage());
         return new ResponseEntity<>(errorResponse,errorResponse.getStatus());
     }
+    @ExceptionHandler(OutSideCityDomainException.class)
+    ResponseEntity<String> OutSideCityDomainExceptionHandler(OutSideCityDomainException e){
+        MyErrorResponse errorResponse=new MyErrorResponse(HttpStatus.NOT_FOUND,e.getMessage(),e.getMessage());
+        return new ResponseEntity<>("{\n message:"+e.getMessage()+"\n}",errorResponse.getStatus());
+    }
 
 
 

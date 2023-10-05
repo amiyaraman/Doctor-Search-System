@@ -3,6 +3,7 @@ package com.example.DoctorSearchSystem.service;
 import com.example.DoctorSearchSystem.dtos.RequestDto.DoctorDto;
 import com.example.DoctorSearchSystem.dtos.RequestDto.PatientDto;
 import com.example.DoctorSearchSystem.dtos.ResponseDto.DoctorList;
+import com.example.DoctorSearchSystem.enums.City;
 import com.example.DoctorSearchSystem.enums.Speciality;
 import com.example.DoctorSearchSystem.exceptions.*;
 import com.example.DoctorSearchSystem.mapper.DoctorMapper;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -69,6 +71,10 @@ public class PatientServiceImpl implements PatientService{
         }
 
         Patient patient = patientOptional.get();
+        if(!Objects.equals(patient.getCity(), "Delhi") && !Objects.equals(patient.getCity(), "Noida") && !Objects.equals(patient.getCity(), "Faridabad")){
+            throw new OutSideCityDomainException("We are still waiting to expand to your location");
+
+        }
 
         String symptom = patient.getSymptom();
         String city = patient.getCity();

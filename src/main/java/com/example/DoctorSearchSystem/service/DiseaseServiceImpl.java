@@ -18,7 +18,6 @@ public class DiseaseServiceImpl implements DiseaseService {
 
 
     public String addDisease(DiseaseDto diseaseDto) {
-        System.out.println("Hitting this");
         Disease disease = diseaseMapper.diseaseDtoToDisease(diseaseDto);
 
         diseaseRepository.save(disease);
