@@ -63,7 +63,6 @@ public class PatientServiceImpl implements PatientService{
         System.out.println(doctorList);
 
         Optional<Patient> patientOptional = patientRepository.findById(patientId);
-        System.out.println(patientOptional.get());
 
         if(patientOptional.isEmpty()){
             throw new PatientException("No patient with given id");
@@ -75,7 +74,11 @@ public class PatientServiceImpl implements PatientService{
         String city = patient.getCity();
 
         Disease disease = diseaseRepository.findByDiseaseName(symptom);
+        if(disease==null){
+            throw  new DiseaseNotFound("No Disease With the symptom of patient exist");
+        }
         Speciality speciality = disease.getSpeciality();
+
 
         List<Doctor> list1 = new ArrayList<>();
         for(Doctor doctor : doctorList){

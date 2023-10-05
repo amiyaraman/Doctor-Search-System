@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class DoctorDto {
 
-    @Min(value = 3 ,message = "Name must be more then 3 character")
+    @Size(min = 3 ,message = "Name must be more then 3 character")
     private String name;
 
 
-    @Max(value = 20 ,message = "city must no be more then 20 character")
+    @Size(max = 20 ,message = "city must no be more then 20 character")
     private String city;
 
     @Email(message = "Email format should be correct ")

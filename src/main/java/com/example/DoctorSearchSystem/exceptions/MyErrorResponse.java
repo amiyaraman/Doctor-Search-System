@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,5 +25,9 @@ public class MyErrorResponse extends ResponseEntityExceptionHandler {
     }
     public MyErrorResponse(HttpStatus status, String message, String error) {
         super();
+        this.status = status;
+        this.message = message;
+        this.errors =new ArrayList<>();
+        errors.add(error);
     }
 }

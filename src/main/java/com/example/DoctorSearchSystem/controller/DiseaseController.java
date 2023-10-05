@@ -19,7 +19,7 @@ public class DiseaseController {
     DiseaseService diseaseService;
 
     @PostMapping("/add-disease")
-    public ResponseEntity<String> addDisease(@Valid @RequestBody DiseaseDto diseaseDto){
+    public ResponseEntity<String> addDisease(@RequestBody DiseaseDto diseaseDto){
             String message = diseaseService.addDisease(diseaseDto);
 
             return new ResponseEntity<>(message, HttpStatus.CREATED);
