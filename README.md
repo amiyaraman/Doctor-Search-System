@@ -1,10 +1,6 @@
-Certainly! Below is an example of a README file for your GitHub repository, explaining the usage and endpoints of your API. You can modify it further to suit your specific project details.
+# Doctor Search System
 
----
-
-# Doctor-Patient Suggestion System
-
-Welcome to the Doctor-Patient Suggestion System, a Spring Boot application for managing doctors, patients, and their medical symptoms. This application provides APIs to add doctors and patients, as well as suggest suitable doctors based on a patient's symptoms.
+Welcome to the Doctor Search System, a Spring Boot application for managing doctors, patients, and their medical symptoms. This application provides APIs to add doctors and patients, as well as suggest suitable doctors based on a patient's symptoms.
 
 ## API Endpoints
 
@@ -72,12 +68,12 @@ All API endpoints are relative to the base URL: `http://localhost:[port_number]/
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-username/doctor-patient-suggestion-system.git
+   git clone https://github.com/your-username/doctor-search-system.git
    ```
 
 2. **Navigate to the Project Directory:**
    ```sh
-   cd doctor-patient-suggestion-system
+   cd doctor-search-system
    ```
 
 3. **Run the Application:**
@@ -96,7 +92,7 @@ All API endpoints are relative to the base URL: `http://localhost:[port_number]/
 
 ### Postman Collection
 
-For testing the APIs, you can import the provided Postman collection: [Doctor-Patient Suggestion System Postman Collection](link_to_your_postman_collection).
+For testing the APIs, you can import the provided Postman collection: [Doctor Search System Postman Collection](link_to_your_postman_collection).
 
 ### Contributing
 
@@ -108,4 +104,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to customize this README according to your specific project details, including additional sections like "Installation," "Database Configuration," or any other relevant information.
+Feel free to customize this README further according to your specific project details, including additional sections like "Installation," "Database Configuration," or any other relevant information related to your Doctor Search System application.
